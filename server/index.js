@@ -440,7 +440,7 @@ app.post("/api/projects/upload", upload.single("file"), async (req, res) => {
       fileName: req.file.originalname,
       localFilePath: req.file.path,
       format: path.extname(req.file.originalname).replace(".", "").toUpperCase(),
-      videoUrl: `http://localhost:${PORT}/uploads/${req.file.filename}`,
+      videoUrl: `https://palimpsest-api.onrender.com/uploads/${req.file.filename}`,
       duration: result.durationFormatted || req.body.duration || "00:00",
       transcript: result.transcript,
       fullTranscript: result.fullTranscript,
